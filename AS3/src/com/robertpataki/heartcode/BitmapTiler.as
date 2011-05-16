@@ -47,9 +47,9 @@ package com.robertpataki.heartcode
 	 * <listing version="3.0">
 	 * 
 	 * <code>
-	 * import com.robertpataki.heartcode.HCPatternImage;
+	 * import com.robertpataki.heartcode.BitmapTiler;
 	 * 
-	 * var pi_sp:HCPatternImage = new HCPatternImage();
+	 * var pi_sp:BitmapTiler = new BitmapTiler();
 	 * pi_sp.name = "pi_sp";
 	 * addChild(pi_sp);
 	 * pi_sp.x = stage.stageWidth/2 - pi_sp.width/2;
@@ -68,9 +68,9 @@ package com.robertpataki.heartcode
 	 * <listing version="3.0">
 	 * 
 	 * <code>
-	 * import com.robertpataki.heartcode.HCPatternImage;
+	 * import com.robertpataki.heartcode.BitmapTiler;
 	 * 
-	 * var pi_sp:HCPatternImage = new HCPatternImage("hcpattern_img", 280, 80);
+	 * var pi_sp:BitmapTiler = new BitmapTiler("hcpattern_img", 280, 80);
 	 * pi_sp.name = "pi_sp";
 	 * addChild(pi_sp);
 	 * pi_sp.x = stage.stageWidth/2 - pi_sp.width/2;
@@ -84,7 +84,7 @@ package com.robertpataki.heartcode
 	 * 
 	 * @author Robert Pataki, heartcode@robertpataki.com
 	 */
-	public class HCPatternImage extends Sprite
+	public class BitmapTiler extends Sprite
 	{
 		public static const DEFAULT_LINKAGEID:String	= "noID";
 		public static const DEFAULT_WIDTH:uint			= 200;
@@ -101,7 +101,7 @@ package com.robertpataki.heartcode
 		 * @param	width The width of the generated image. The default value is <code>DEFAULT_WIDTH</code>
 		 * @param	height The height of the generated image. The default value is <code>DEFAULT_HEIGHT</code>
 		 */
-		public function HCPatternImage(linkageID:String=DEFAULT_LINKAGEID, width:uint=DEFAULT_WIDTH, height:uint=DEFAULT_HEIGHT)
+		public function BitmapTiler(linkageID:String=DEFAULT_LINKAGEID, width:uint=DEFAULT_WIDTH, height:uint=DEFAULT_HEIGHT)
 		{
 			imageWidth = width;
 			imageHeight = height;
@@ -133,7 +133,7 @@ package com.robertpataki.heartcode
 				
 				pattern_bmp = new Bitmap(pattern_bd);
 				
-				trace("\n\tMessage from HCPatternImage :\n\t | Some of the parameters are missing or the linkage id is wrong!\n\t | An auto-generated pattern has been created.\n\t | See the documentation for more details and examples.\n\tEnd of line.");
+				trace("\n\tMessage from BitmapTiler :\n\t | Some of the parameters are missing or the linkage id is wrong!\n\t | An auto-generated pattern has been created.\n\t | See the documentation for more details and examples.\n\tEnd of line.");
 			}
 			
 			var pw:uint = pattern_bmp.width;

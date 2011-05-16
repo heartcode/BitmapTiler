@@ -37,9 +37,9 @@ import flash.geom.Rectangle;
  * 
  * <h2>Examples</h2>
  * <p><strong>Example 1: </strong> If the constructor is called without parameters or the linkage id cannot be found it creates an image from an auto-generated pattern.
- * {@code import com.robertpataki.heartcode.HCPatternImage;
+ * {@code import com.robertpataki.heartcode.BitmapTiler;
  * 
- * new HCPatternImage();
+ * new BitmapTiler();
  * }
  * <p><img src="../../../images/hc/hcpatternimage_01.png" width="200" height="200" alt="hcpatternimage_01.png" /></p>
  * 
@@ -49,9 +49,9 @@ import flash.geom.Rectangle;
  * <p><img src="../../../images/hc/hcpatternimage_02_1.png" width="39" height="45" alt="hcpatternimage_02_1.png" /></p>
  * 
  * <p>...and this code...</p>
- * {@code import com.robertpataki.heartcode.HCPatternImage;
+ * {@code import com.robertpataki.heartcode.BitmapTiler;
  * 
- * new HCPatternImage(this, "patternImage_mc", "hcpattern_img", 280, 80);
+ * new BitmapTiler(this, "patternImage_mc", "hcpattern_img", 280, 80);
  * patternImage_mc._x = Stage.width / 2 - patternImage_mc._width/2;
  * patternImage_mc._y = Stage.height / 2 - patternImage_mc._height/2;
  * }
@@ -60,7 +60,7 @@ import flash.geom.Rectangle;
  *
  * @author Robert Pataki, heartcode@robertpataki.com
  */
-class com.robertpataki.heartcode.HCPatternImage extends MovieClip
+class com.robertpataki.heartcode.BitmapTiler extends MovieClip
 {
 	private var _parent:MovieClip;
 	private var _name:String;
@@ -84,7 +84,7 @@ class com.robertpataki.heartcode.HCPatternImage extends MovieClip
 	 * @param	width The width of the generated image. The default value is <code>200</code>
 	 * @param	height The height of the generated image. The default value is <code>200</code>
 	*/
-	public function HCPatternImage(parent:MovieClip, name:String, linkageID:String, width:Number, height:Number)
+	public function BitmapTiler(parent:MovieClip, name:String, linkageID:String, width:Number, height:Number)
 	{
 		_parent = MovieClip(parent) != undefined ? MovieClip(parent) : defaultParent;
 		_name = name != undefined && name != "" ? name : defaultName;
@@ -137,7 +137,7 @@ class com.robertpataki.heartcode.HCPatternImage extends MovieClip
 			imageClip._x = Math.round(Stage.width / 2 - imageClip._width / 2);
 			imageClip._y = Math.round(Stage.height / 2 - imageClip._height / 2);
 			
-			trace("\n\tMessage from HCPatternImage :\n\t | Some of the parameters are missing!\n\t | An auto-generated pattern has been added to the _root object.\n\t | See the documentation for more details and examples.\n\tEnd of line.");
+			trace("\n\tMessage from BitmapTiler :\n\t | Some of the parameters are missing!\n\t | An auto-generated pattern has been added to the _root object.\n\t | See the documentation for more details and examples.\n\tEnd of line.");
 		}
 	};
 };
