@@ -50,6 +50,10 @@ If the constructor is called with the custom parameters, it places the generated
 	new BitmapTiler(this, "patternImage_mc", "hcpattern_img", 280, 80);
 	patternImage_mc._x = Stage.width * 0.5 - patternImage_mc._width * 0.5;
 	patternImage_mc._y = Stage.height * 0.5 - patternImage_mc._height * 0.5;
+	
+
+**If you don't know where to start check out the HeartCode_QuickStartGuide_BitmapTiler.pdf file for some help.**
+	
 
 ## Credits
 
