@@ -15,7 +15,7 @@
 
 ## Usage
 
-**AS3 (default tiled image):**
+**AS3:**
 
 If the constructor is called without parameters or the linkage id cannot be found it creates an image from an auto-generated pattern:
 	
@@ -26,6 +26,7 @@ If the constructor is called without parameters or the linkage id cannot be foun
 	pi_sp.y = stage.stageHeight * 0.5 - pi_sp.height * 0.5;
 	addChild(pi_sp);
 	
+	
 The constructor can be also called by passing a bitmap linkage id and the dimensions of the tiled image:
 
 	import com.robertpataki.heartcode.BitmapTiler;
@@ -35,13 +36,14 @@ The constructor can be also called by passing a bitmap linkage id and the dimens
 	pi_sp.y = stage.stageHeight * 0.5 - pi_sp.height * 0.5;
 	addChild(pi_sp);
 
-**AS2 (custom indicator):**
+**AS2:**
 	
 If the constructor is called without parameters or the linkage id cannot be found it creates an image from an auto-generated pattern and places the tiled image on the stage:
 	
 	import com.robertpataki.heartcode.BitmapTiler;
 
 	new BitmapTiler();
+	
 	
 If the constructor is called with the custom parameters, it places the generated image to the destination movieclip:
 	
